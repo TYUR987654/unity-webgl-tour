@@ -2,7 +2,7 @@ body , html{ margin: 0;
     padding: 0;
     overflow: hidden; /* Remove rolagem global */ }
 #unity-container { position: absolute }
-#unity-container.unity-desktop {   width: 90vw;
+#unity-container.unity-desktop {   width: 95vw;
     max-width: 1500px;
     height: 650px; /* Altura fixa ajustada */
     left: 50%;
