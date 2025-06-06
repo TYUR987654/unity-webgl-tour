@@ -97,9 +97,11 @@
 
 
       } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "1200px";
-        canvas.style.height = "650px";
+          // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+          canvas.style.width = "90vw";  // 90% da largura da viewport
+          canvas.style.height = "90vh";  // 90% da altura da viewport
+          canvas.style.maxWidth = "100%"; // Garante que não ultrapasse os limites
+          canvas.style.maxHeight = "100%"; // Garante que não ultrapasse os limites
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
