@@ -1,8 +1,15 @@
 body { padding: 0; margin: 0 }
 #unity-container { position: absolute }
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-desktop {  width: 90vw; /* Define a largura do contêiner como 90% da viewport */
+    max-width: 1500px; /* Opcional: limita a largura máxima (igual ao canvas original) */
+    height: 750px; /* Altura fixa (ou use "90vh" para altura proporcional) */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 #unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
-#unity-canvas { background: #231F20 }
+#unity-canvas { width: 100% !important; /* Ocupa 100% do contêiner pai (90vw) */
+    height: 100% !important; /* Ocupa 100% da altura do contêiner (750px) */
+    background: #231F20;}
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
 #unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
