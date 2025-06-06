@@ -97,11 +97,11 @@
 
 
       } else {
-          // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-          canvas.style.width = "90vw";  // 90% da largura da viewport
-          canvas.style.height = "90vh";  // 90% da altura da viewport
-          canvas.style.maxWidth = "100%"; // Garante que não ultrapasse os limites
-          canvas.style.maxHeight = "100%"; // Garante que não ultrapasse os limites
+          // Remove estilos inline do canvas (para evitar conflitos)
+          canvas.removeAttribute("style");
+          // Define classes para o contêiner e canvas
+          document.querySelector("#unity-container").className = "unity-desktop";
+          canvas.className = "";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
